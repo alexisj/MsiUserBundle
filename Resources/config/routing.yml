@@ -1,0 +1,27 @@
+user:
+  pattern:  admin/
+  defaults: { _controller: MsiUserBundle:admin\User:index }
+
+user_new:
+  pattern:  admin/new/
+  defaults: { _controller: MsiUserBundle:admin\User:new }
+
+user_create:
+  pattern:  admin/create/
+  defaults: { _controller: MsiUserBundle:admin\User:create }
+    
+user_edit:
+  pattern:  admin/{id}/edit/
+  defaults: { _controller: MsiUserBundle:admin\User:edit }
+  requirements:
+    id: \d+
+
+user_update:
+  pattern:  admin/{id}/update/
+  defaults: { _controller: MsiUserBundle:admin\User:update }
+  requirements:
+    id: \d+
+
+user_reset_filters:
+  pattern:  admin/reset/filters/
+  defaults: { _controller: MsiUserBundle:admin\User:resetFilters }
